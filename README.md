@@ -15,6 +15,6 @@ dependencies {
 
 ![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-42.png "Simple Tabs")
 
-![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-49.png "Icon and Text Tabs")
+![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-49.png  "Icon and Text Tabs")
 
-![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-54.png "Only Icon Tabs")
+![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-54.png  "Only Icon Tabs")
