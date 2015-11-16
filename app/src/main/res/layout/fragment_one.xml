@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="60dp"
-        android:textColor="#ffffff"
-        android:fontFamily="sans-serif-medium"/>
+        android:textSize="40dp"
+        android:text="fedora"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="sans-serif-condensed"/>
 </RelativeLayout>
