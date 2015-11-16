@@ -12,7 +12,6 @@ dependencies {
 ```
 
 ## Screenshots
-<img src="url" alt="alt text" style="height:400">
 
 ![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-42.png "Simple Tabs")
 
