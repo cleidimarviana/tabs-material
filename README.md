@@ -1,4 +1,4 @@
-# Tabs Material
+# Android Material Design Working With Tabs
 Tabs with Material Design.
 
 ## build.gradle
@@ -13,8 +13,33 @@ dependencies {
 
 ## Screenshots
 
-![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-42.png "Simple Tabs")
+![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/screenshots.png "Simple Tabs")
 
-![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-49.png  "Icon and Text Tabs")
+Feedback
+----
+Questions, comments, and feedback are welcome at cleidimarviana@gmail.com
 
-![alt tag](https://github.com/cleidimarviana/TabLayout/blob/master/screenshots/Screenshot_2015-11-16-03-34-54.png  "Only Icon Tabs")
+License
+----
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Cleidimar Viana 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

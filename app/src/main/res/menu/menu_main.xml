@@ -7,4 +7,9 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_only_icons" android:title="@string/action_onle_icons"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_github"
+        android:title="GitHub"
+        android:icon="@drawable/ic_github"
+        app:showAsAction="ifRoom"/>
 </menu>

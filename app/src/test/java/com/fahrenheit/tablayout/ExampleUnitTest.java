@@ -1,4 +1,4 @@
-package com.fahrenheit.tablayout;
+package com.seamusdawkins.tablayout;
 
 import org.junit.Test;
 

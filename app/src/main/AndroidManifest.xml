@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fahrenheit.tablayout" >
+    package="com.seamusdawkins.tablayout" >
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".SimpleActivity"
+            android:name=".activities.SimpleActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +19,13 @@
         </activity>
 
         <activity
-            android:name=".IconTextActivity"
+            android:name=".activities.IconTextActivity"
             android:theme="@style/AppTheme.NoActionBar" >
 
         </activity>
 
         <activity
-            android:name=".OnlyIconsActivity"
+            android:name=".activities.OnlyIconsActivity"
             android:theme="@style/AppTheme.NoActionBar" >
 
         </activity>
