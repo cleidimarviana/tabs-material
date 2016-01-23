@@ -5,8 +5,21 @@
     <string name="action_simple_tabs">Simple Tabs</string>
     <string name="action_icon_text_tabs">Icon and Text Tabs</string>
     <string name="action_onle_icons">Only Icon Tabs</string>
+    <string name="action_scrollable_tabs">Scrollable Tabs</string>
+
 
     <string name="str_first">First</string>
     <string name="str_third">Third</string>
     <string name="str_second">Second</string>
+
+
+    <string name="str_scrollable">This is a standard text for demostration</string>
+
+    <string-array name="fi">
+        <item>Simple Tabs</item>
+        <item>Scrollable Tabs</item>
+        <item>Only Icon Tabs</item>
+        <item>Custom View Icon and Text</item>
+    </string-array>
+
 </resources>

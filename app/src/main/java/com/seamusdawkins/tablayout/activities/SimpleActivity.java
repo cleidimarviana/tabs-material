@@ -63,17 +63,25 @@ public class SimpleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.action_simple_tabs);
-        setSupportActionBar(toolbar);
-
+        setToolbar(); // set toolbar
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+    }
 
+    /**
+     * This method to configure the toolbar.
+     * Set a Toolbar to replace the ActionBar
+     */
+    public void setToolbar() {
+        // Set a Toolbar to replace the ActionBar.
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.action_simple_tabs);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -90,18 +98,8 @@ public class SimpleActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         switch(id) {
-            case R.id.action_samples:
-
-                break;
-            case R.id.action_icon_text:
-                IconTextActivity.start(this);
-                overridePendingTransition(0, 0);
-                finish();
-                break;
-            case R.id.action_only_icons:
-                OnlyIconsActivity.start(this);
-                overridePendingTransition(0, 0);
-                finish();
+            case android.R.id.home:
+                onBackPressed();
                 break;
             case R.id.action_github:
                 String url = "https://github.com/cleidimarviana/tabs-material";
@@ -148,5 +146,11 @@ public class SimpleActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragTitleList.get(position);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }

@@ -10,8 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40dp"
-        android:text="fedora"
+        android:textSize="24dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/str_scrollable"
         android:textColor="@color/colorPrimary"
         android:fontFamily="sans-serif-condensed"/>
 </RelativeLayout>

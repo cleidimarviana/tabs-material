@@ -44,7 +44,7 @@ import com.seamusdawkins.tablayout.fragments.FirstFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OnlyIconsActivity extends AppCompatActivity {
+public class CustomIconTextActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -56,7 +56,7 @@ public class OnlyIconsActivity extends AppCompatActivity {
     };
 
     public static void start(Context context){
-        Intent i = new Intent(context, OnlyIconsActivity.class);
+        Intent i = new Intent(context, CustomIconTextActivity.class);
         context.startActivity(i);
     }
 
@@ -67,7 +67,6 @@ public class OnlyIconsActivity extends AppCompatActivity {
 
         setToolbar();
 
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -75,6 +74,7 @@ public class OnlyIconsActivity extends AppCompatActivity {
         setupTabIcons();
 
     }
+
     /**
      * This method to configure the toolbar.
      * Set a Toolbar to replace the ActionBar
@@ -82,11 +82,10 @@ public class OnlyIconsActivity extends AppCompatActivity {
     public void setToolbar() {
         // Set a Toolbar to replace the ActionBar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.action_onle_icons);
+        toolbar.setTitle(R.string.action_icon_text_tabs);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -105,14 +104,12 @@ public class OnlyIconsActivity extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 break;
-
             case R.id.action_github:
                 String url = "https://github.com/cleidimarviana/tabs-material";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
                 break;
-
             default:
         }
 
@@ -134,6 +131,7 @@ public class OnlyIconsActivity extends AppCompatActivity {
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
+
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
@@ -151,16 +149,15 @@ public class OnlyIconsActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return null;
+            return mFragmentTitleList.get(position);
         }
-
     }
-
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
     }
+
     @Override
     public void onBackPressed() {
         finish();

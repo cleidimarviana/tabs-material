@@ -36,45 +36,42 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.seamusdawkins.tablayout.fragments.SecondFragment;
 import com.seamusdawkins.tablayout.R;
-import com.seamusdawkins.tablayout.fragments.ThirdFragment;
 import com.seamusdawkins.tablayout.fragments.FirstFragment;
+import com.seamusdawkins.tablayout.fragments.ScrollableFragment;
+import com.seamusdawkins.tablayout.fragments.SecondFragment;
+import com.seamusdawkins.tablayout.fragments.ThirdFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OnlyIconsActivity extends AppCompatActivity {
+public class ScrollableActivity extends AppCompatActivity {
+
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private int[] tabIcons = {
-            R.drawable.ic_android,
-            R.drawable.ic_android,
-            R.drawable.ic_android
-    };
+
 
     public static void start(Context context){
-        Intent i = new Intent(context, OnlyIconsActivity.class);
+        Intent i = new Intent(context, ScrollableActivity.class);
         context.startActivity(i);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scrollable);
 
-        setToolbar();
-
+        setToolbar(); // set toolbar
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
+
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-        setupTabIcons();
-
     }
+
     /**
      * This method to configure the toolbar.
      * Set a Toolbar to replace the ActionBar
@@ -82,11 +79,10 @@ public class OnlyIconsActivity extends AppCompatActivity {
     public void setToolbar() {
         // Set a Toolbar to replace the ActionBar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.action_onle_icons);
+        toolbar.setTitle(R.string.action_scrollable_tabs);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -105,25 +101,28 @@ public class OnlyIconsActivity extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 break;
-
             case R.id.action_github:
                 String url = "https://github.com/cleidimarviana/tabs-material";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
-                break;
-
             default:
         }
 
         return super.onOptionsItemSelected(item);
     }
-
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new FirstFragment(), getResources().getString(R.string.str_first));
-        adapter.addFrag(new SecondFragment(), getResources().getString(R.string.str_second));
-        adapter.addFrag(new ThirdFragment(), getResources().getString(R.string.str_third));
+        adapter.addFragment(new ScrollableFragment(), "ONE");
+        adapter.addFragment(new ScrollableFragment(), "TWO");
+        adapter.addFragment(new ScrollableFragment(), "THREE");
+        adapter.addFragment(new ScrollableFragment(), "FOUR");
+        adapter.addFragment(new ScrollableFragment(), "FIVE");
+        adapter.addFragment(new ScrollableFragment(), "SIX");
+        adapter.addFragment(new ScrollableFragment(), "SEVEN");
+        adapter.addFragment(new ScrollableFragment(), "EIGHT");
+        adapter.addFragment(new ScrollableFragment(), "NINE");
+        adapter.addFragment(new ScrollableFragment(), "TEN");
         viewPager.setAdapter(adapter);
     }
 
@@ -134,6 +133,7 @@ public class OnlyIconsActivity extends AppCompatActivity {
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
+
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
@@ -144,23 +144,17 @@ public class OnlyIconsActivity extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFrag(Fragment fragment, String title) {
+        public void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return null;
+            return mFragmentTitleList.get(position);
         }
-
     }
 
-    private void setupTabIcons() {
-        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
-        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
-    }
     @Override
     public void onBackPressed() {
         finish();

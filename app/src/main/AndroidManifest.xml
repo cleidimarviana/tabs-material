@@ -9,8 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".activities.SimpleActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,14 +19,25 @@
         </activity>
 
         <activity
-            android:name=".activities.IconTextActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name=".activities.SimpleActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".activities.CustomIconTextActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
         <activity
             android:name=".activities.OnlyIconsActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".activities.ScrollableActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
     </application>
