@@ -102,7 +102,7 @@ public class OnlyIconsActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.action_github:
-                String url = "https://github.com/cleidimarviana";
+                String url = "https://github.com/cleidimarviana/tabs-material";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
